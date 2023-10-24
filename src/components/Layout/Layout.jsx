@@ -3,13 +3,16 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Outlet } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-
-import { useMutation } from "react-query";
+import { useMutation } from 'react-query';
 import { createUser } from "../../utils/api";
-
 import UserDetailContext from "../../Context/UserDetailContext";
+import useFavourites from "../../hooks/useFavourites";
+import useBookings from "../../hooks/useBookings";
+
 
 const Layout = () => {
+  useFavourites();
+  useBookings();
 
   const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
   const { setUserDetails } = useContext(UserDetailContext);
@@ -28,11 +31,9 @@ const Layout = () => {
           scope: "openid profile email",
         },
       });
-
       localStorage.setItem("access_token", res);
       setUserDetails((prev) => ({ ...prev, token: res }));
        mutate(res)
-      // console.log(res)
     };
 
 

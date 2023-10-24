@@ -1,35 +1,35 @@
 .r-card{
-    gap:0.6rem;
+    gap: 0.6rem;
     padding: 1rem;
-    border-radius:10px;
-    max-width:max-content;
-    margin:auto;
-    transition:all 300 ms ease-in;
-    position:relative;
-    z-index:0;
+    border-radius: 10px;
+    max-width: max-content;
+    margin: auto;
+    transition: all 300 ms ease-in;
+    position: relative;
+    z-index: 0;
 
 }
 .r-card>svg{
-    position:absolute;
-    top:150px;
-    left:25px;
+    position: absolute;
+    top: 150px;
+    left: 25px;
     z-index: 1;
 }
-.r-card>img{
-    height:10rem;
-    width:15rem;
+.r-card > img{
+    height: 10rem;
+    width: 15rem;
     border-radius:10px;
 }
 .r-card>:nth-child(3){
-    font-size:1.2rem;
-    font-weight:600rem;
+    font-size: 1.2rem;
+    font-weight: 600rem;
 }
 .r-card>:nth-child(4){
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
 .r-card>:nth-child(5){
-    font-size:.7rem;
-    width:15rem;
+    font-size: 0.7rem;
+    width: 15rem;
 }
 .r-card:hover{
     scale:1rem;
